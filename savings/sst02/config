@@ -1,0 +1,27 @@
+[General]
+revision = "flatten"
+datapath = "./data/smallset/SST-2/"
+embed_path = "./data/smallset/SST-2/embedding.txt"
+optimizer = "adam"
+attn_mode = "rout"
+seq_encoder = "bilstm"
+out_caps_num = 5
+rout_iter = 3
+max_snt_num = 50
+max_wd_num = 50
+max_epochs = 50
+pre_trained = true
+batch_sz = 64
+batch_sz_min = 16
+bucket_sz = 5000
+partial_update_until_epoch = 2
+embed_size = 300
+hidden_size = 200
+dense_hidden = [300, 2]
+lr = 0.0003
+decay_steps = 1000
+decay_rate = 0.9
+dropout = 0.5
+early_stopping = 7
+reg = 1e-06
+
