@@ -1,5 +1,5 @@
 # Capsule4TextClassification
-Sequence Encoding via Dynamic Routing for Text Classification
+Implementation of our paper ["Information Aggregation via Dynamic Routing for Sequence Encoding"]() 
 
 # Sytem Requirements
 OS: Linux (Ubuntu 14.04+) 

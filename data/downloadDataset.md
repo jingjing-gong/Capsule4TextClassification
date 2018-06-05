@@ -1,4 +1,5 @@
-Datasets are stored on [Baidu Cloud Storage](https://pan.baidu.com/s/1x3lU9yrPNOYEpxqY_TtUbQ),
+Please retrieve data from [Baidu Cloud Storage](https://pan.baidu.com/s/1x3lU9yrPNOYEpxqY_TtUbQ) or
+ [Google Drive](https://drive.google.com/open?id=1JmY1CuASBIA8SW-Z5wMyc9ilseU2RHDZ),
 pelase download `dataset.tar.gz` and decompress it by `tar zxvf dataset.tar.gz` and place directory
  `smallset` in `data` directory.
  
