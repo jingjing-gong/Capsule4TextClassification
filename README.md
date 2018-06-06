@@ -1,5 +1,6 @@
 # Capsule4TextClassification
-Implementation of our paper ["Information Aggregation via Dynamic Routing for Sequence Encoding"]() 
+Implementation of our paper 
+["Information Aggregation via Dynamic Routing for Sequence Encoding"](https://arxiv.org/pdf/1806.01501.pdf) 
 
 # Sytem Requirements
 OS: Linux (Ubuntu 14.04+) 
