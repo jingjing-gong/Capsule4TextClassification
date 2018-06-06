@@ -40,7 +40,7 @@ Note that we provide a sentence level model (caps_attn_flatten) and a document l
 
 Take first command for example `--load-config` indicates that before construction of the computational graph we will
  load a config file from a directory which ever `--weight-path` specifies, in this case `./savings/sst01`. 
- There is a `./savings/sst01/config` file that controls the configuration of the model, if you ever what to run 
+ There is a `./savings/sst01/config` file that controls the configuration of the model, if you ever want to run 
  another configuration, you should simply copy the `./savings/sst01` directory and modify the config file, 
  and then run a command similar to those specified as above.
 
