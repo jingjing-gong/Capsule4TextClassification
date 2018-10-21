@@ -84,8 +84,8 @@ def paddata(data_x: list, max_wd_num: int):
 
     b_sz = len(data_x)
 
-    wd_num = np.array([len(doc) for doc in data_x], dtype=np.int32)
-    wd_sz = min(np.max(wd_num), max_wd_num)
+    wd_num = np.array([len(doc) if len(doc) < max_wd_num else max_wd_num for doc in data_x], dtype=np.int32)
+    wd_sz = np.max(wd_num)
 
     b = np.zeros(shape=[b_sz, wd_sz], dtype=np.int32)  # == PAD
     wNum = wd_num

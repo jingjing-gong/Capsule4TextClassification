@@ -225,7 +225,7 @@ class model(object):
         self.accuracy = tf.reduce_mean(tf.cast(tf.equal(self.prediction, labels), tf.float32))
 
         loss = tf.nn.sparse_softmax_cross_entropy_with_logits(logits=logits, labels=labels)
-        loss = tf.reduce_mean(loss)
+        ce_loss = tf.reduce_mean(loss)
 
         exclude_vars = nest.flatten([[v for v in tf.trainable_variables(o.name)] for o in self.EX_REG_SCOPE])
         exclude_vars_2 = [v for v in tf.trainable_variables() if '/bias:' in v.name]
@@ -245,11 +245,11 @@ class model(object):
         print(['%s:%.3fM' % (v.name, np.prod(v.get_shape().as_list()) / 1000000.) for v in reg_var_list])
         print('===' * 20)
         '''shape(b_sz,)'''
-        self.ce_loss = loss
-        self.w_loss = tf.reduce_mean(tf.multiply(self.ce_loss, self.ph_sample_weights))
+        self.ce_loss = ce_loss
+        self.w_loss = tf.reduce_mean(tf.multiply(loss, self.ph_sample_weights))
         reg = self.config.reg
 
-        return self.w_loss + reg * reg_loss
+        return self.ce_loss + reg * reg_loss
 
     def add_train_op(self, loss):
 
